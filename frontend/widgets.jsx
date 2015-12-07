@@ -1,6 +1,29 @@
 var React = require('react'),
-    ReactDOM = require('react-dom');
+    Autocomplete = require('./autocomplete.jsx');
 
-document.addEventListener("DOMContentLoaded", function () {
-  ReactDOM.render();
+
+var searchNames = [
+  'Kyle',
+  'Kareem',
+  'Jon',
+  'Bill',
+  'Billy',
+  'billison',
+  'Bob',
+  'Bobbby'
+];
+
+var Widgets = React.createClass({
+  getInitialState: function () {
+    return { names: searchNames};
+  },
+  render: function () {
+    return (
+      <div>
+        <Autocomplete names={searchNames}/>
+      </div>
+    );
+  }
 });
+
+module.exports = Widgets;

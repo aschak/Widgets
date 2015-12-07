@@ -1,6 +1,6 @@
 module.exports = {
   context: __dirname,
-  entry: "./widgets.jsx",
+  entry: "./frontend/entry.jsx",
   output: {
     path: "./",
     filename: "bundle.js"
@@ -16,5 +16,9 @@ module.exports = {
         }
       }
     ]
+  },
+  devtool: 'source-maps',
+  resolve: {
+    extensions: ["", ".js", '.jsx']
   }
 };
